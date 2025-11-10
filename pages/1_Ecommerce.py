@@ -78,26 +78,3 @@ if st.button("Jalankan Query"):
                 for r in hasil
             ]
             st.dataframe(pd.DataFrame(rows))
-
-    # elif cq_option == "Penjual dengan jumlah produk terbanyak":
-    #     hasil = run_sparql(graph, eq.CQ15)
-    #     rows = [{"Penjual": str(r[0]), "Jumlah Produk": int(r[1])} for r in hasil]
-    #     st.dataframe(pd.DataFrame(rows))
-
-    # elif cq_option == "Pelanggan dari kota tertentu":
-    #     query = eq.CQ17_TEMPLATE.format(kota=user_input)
-    #     hasil = run_sparql(graph, query)
-    #     rows = [{"Pelanggan": str(r[0]), "Email": str(r[1])} for r in hasil]
-    #     st.dataframe(pd.DataFrame(rows))
-
-    # elif cq_option == "Produk dengan promo diskon minimum":
-    #     try:
-    #         diskon_min = int(extra_input)
-    #     except:
-    #         st.error("Masukkan angka diskon minimum")
-    #         diskon_min = None
-    #     if diskon_min:
-    #         query = eq.CQ20_TEMPLATE.format(diskon_min=diskon_min)
-    #         hasil = run_sparql(graph, query)
-    #         rows = [{"Produk": str(r[0]), "Harga Asli": int(r[1]), "Diskon": int(r[2]), "Harga Diskon": float(r[3])} for r in hasil]
-    #         st.dataframe(pd.DataFrame(rows))
