@@ -156,5 +156,12 @@ def build_ecommerce_graph():
         g.add((uri, ECO.tanggalMulai, Literal(mulai, datatype=XSD.date)))
         g.add((uri, ECO.tanggalAkhir, Literal(akhir, datatype=XSD.date)))
 
+    g.add((ECO.Laptop_Gaming, ECO.memilikiPromo, ECO.Promo_Elektronik))
+    g.add((ECO.Smartphone_X, ECO.memilikiPromo, ECO.Promo_October))
+    g.add((ECO.iPhone_15, ECO.memilikiPromo, ECO.Promo_Welcome))
+    g.add((ECO.Sepatu_Lari, ECO.memilikiPromo, ECO.Promo_Welcome))
+    g.add((ECO.Kaos_Polos, ECO.memilikiPromo, ECO.Promo_Welcome))
+    g.add((ECO.Meja_Kerja, ECO.memilikiPromo, ECO.Promo_Welcome))
+    g.add((ECO.Jaket_Olahraga, ECO.memilikiPromo, ECO.Promo_Welcome))
 
     return g

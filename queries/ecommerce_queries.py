@@ -33,7 +33,7 @@ SELECT ?produkName ?harga ?brandName WHERE {{
           eco:harga ?harga ;
           eco:memilikiBrand ?brand .
   ?brand rdfs:label ?brandName .
-  FILTER (?harga < {harga_max})
+  FILTER (?harga <= {harga_max})
 }}
 ORDER BY ?harga
 """
@@ -70,7 +70,7 @@ SELECT ?produkName ?harga ?diskon ?hargaDiskon WHERE {{
           eco:memilikiPromo ?promo .
   ?promo eco:diskonPersen ?diskon .
   BIND(?harga * (1 - (?diskon / 100)) as ?hargaDiskon)
-  FILTER (?diskon > {diskon_min})
+  FILTER (?diskon >= {diskon_min})
 }}
 ORDER BY DESC(?diskon)
 """
